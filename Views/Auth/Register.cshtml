@@ -1,0 +1,25 @@
+@model UserModel;
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+@using(Html.BeginForm(actionName: "Register", controllerName: "Auth", FormMethod.Post)) {
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.userName)</legend>
+        @Html.TextBoxFor(Model => Model.userName, htmlAttributes: new { required="required" })
+    </fieldset>
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.email)</legend>
+        @Html.TextBoxFor(Model => Model.email, htmlAttributes: new { required="required" })
+    </fieldset>
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.password)</legend>
+        @Html.TextBoxFor(Model => Model.password, htmlAttributes: new { required="required" })
+    </fieldset>
+
+    <button type="submit">Submit</button>
+}
