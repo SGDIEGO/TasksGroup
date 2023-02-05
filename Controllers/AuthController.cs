@@ -4,12 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using AspNetCore.Models;
 using Microsoft.AspNetCore.Mvc;
+using AspNetCore.Data;
 
 namespace AspNetCore.Controllers
 {
     public class AuthController : Controller
     {
-        public AuthController() { }
+        private readonly TaskGroupsContext db;
+
+        public AuthController(TaskGroupsContext _db)
+        {
+            db = _db;
+        }
 
         public async Task<IActionResult> Login()
         {
@@ -21,13 +27,22 @@ namespace AspNetCore.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(UserModel user)
         {
-            // TODO: Your code here
-            await Task.Yield();
+            var userFind = db.Users.AsEnumerable().SingleOrDefault((e) => e.email == user.email, null);
 
-            HttpContext.Session.SetInt32("user_id", user.user_id);
-            HttpContext.Session.SetString("userName", user.user_name);
-            HttpContext.Session.SetString("email", user.email);
-            HttpContext.Session.SetString("password", user.password);
+            if (userFind == null)
+            {
+                return BadRequest("No user register");
+            }
+
+            if (userFind.password != user.password)
+            {
+                return BadRequest("Password error");
+            }
+
+            HttpContext.Session.SetInt32("user_id", userFind.user_id);
+            HttpContext.Session.SetString("user_name", userFind.user_name);
+            HttpContext.Session.SetString("email", userFind.email);
+            HttpContext.Session.SetString("password", userFind.password);
 
             return RedirectToAction(actionName: "Index", controllerName: "Principal");
         }
@@ -41,10 +56,13 @@ namespace AspNetCore.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(UserModel user)
         {
-            HttpContext.Session.SetInt32("user_id", user.user_id);
-            HttpContext.Session.SetString("userName", user.user_name);
-            HttpContext.Session.SetString("email", user.email);
-            HttpContext.Session.SetString("password", user.password);
+            if (!ModelState.IsValid)
+            {
+                return StatusCode(500);
+            }
+
+            await db.Users.AddAsync(user);
+            await db.SaveChangesAsync();
 
             return RedirectToAction(actionName: "Index", controllerName: "Principal");
         }
@@ -54,6 +72,7 @@ namespace AspNetCore.Controllers
             await Task.Yield();
 
             HttpContext.Session.Clear();
+            await HttpContext.Session.LoadAsync();
 
             return RedirectToAction("Index", "Principal");
         }

@@ -1,3 +1,32 @@
+@model (List<GroupModel>, int)
+
 @{
     ViewData["Title"] = "Groups";
 }
+
+<div class="groups">
+    @if (Model.Item2 != 0){
+        <h1 class="offcanvas-title">Create your own groups and share with other users</h1>
+        @Html.ActionLink("Create", "CreateGroups", "Principal")
+    } else{
+        <p class="alert-warning">Please, login to create yourn own groups</p>
+    }
+    @if (Model.Item1.Count() != 0)
+    {
+        <div class="groups-item">
+        @foreach (var item in Model.Item1)
+        {
+            <div class="lead item">
+                <p>Group_name: @item.group_name</p>
+                <p>Description: @item.description</p>
+                <p>Number members: @item.members</p>
+                <p>Coordinator id: @item.coord_id</p>
+
+                @Html.ActionLink("Edit", "", "")
+                @Html.ActionLink("Delete", "", "")
+            </div>
+        }
+        </div>
+    }
+
+</div>

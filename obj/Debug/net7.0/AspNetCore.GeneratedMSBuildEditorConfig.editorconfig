@@ -28,12 +28,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Principal/Groups.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEdyb3Vwcy5jc2h0bWw=
+[C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Principal/CreateGroups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXENyZWF0ZUdyb3Vwcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Principal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Principal/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Shared/_ValidationScriptsPartial.cshtml]
@@ -47,6 +51,10 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Principal/Groups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpbmNpcGFsXEdyb3Vwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-mg2s56wk5l
 
 [C:/Users/51916/OneDrive/Escritorio/RoutMapNet/AspNetCore/Views/Shared/_HomePartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ib21lUGFydGlhbC5jc2h0bWw=

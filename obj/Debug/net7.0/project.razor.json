@@ -18655,6 +18655,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\51916\\OneDrive\\Escritorio\\RoutMapNet\\AspNetCore\\Views\\Principal\\Users.cshtml",
+      "TargetPath": "Views\\Principal\\Users.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\51916\\OneDrive\\Escritorio\\RoutMapNet\\AspNetCore\\Views\\Principal\\CreateGroups.cshtml",
+      "TargetPath": "Views\\Principal\\CreateGroups.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\51916\\OneDrive\\Escritorio\\RoutMapNet\\AspNetCore\\Views\\Principal\\Index.cshtml",
       "TargetPath": "Views\\Principal\\Index.cshtml",
       "FileKind": "mvc"

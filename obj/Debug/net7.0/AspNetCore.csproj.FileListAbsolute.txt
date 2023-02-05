@@ -73,3 +73,4 @@ C:\Users\51916\OneDrive\Escritorio\RoutMapNet\AspNetCore\bin\Debug\net7.0\Micros
 C:\Users\51916\OneDrive\Escritorio\RoutMapNet\AspNetCore\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\51916\OneDrive\Escritorio\RoutMapNet\AspNetCore\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\51916\OneDrive\Escritorio\RoutMapNet\AspNetCore\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\51916\OneDrive\Escritorio\RoutMapNet\AspNetCore\obj\Debug\net7.0\scopedcss\Views\Principal\Groups.cshtml.rz.scp.css

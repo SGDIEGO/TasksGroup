@@ -1,3 +1,26 @@
+/* _content/AspNetCore/Views/Principal/Groups.cshtml.rz.scp.css */
+.groups-item[b-mg2s56wk5l]{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.item:hover[b-mg2s56wk5l]{
+    transform:scale(1.1)
+}
+
+.item:hover:not(:hover)[b-mg2s56wk5l]{
+    opacity: 0.6;
+}
+
+.item[b-mg2s56wk5l]{
+    opacity: 1;
+    background-color: white;
+    min-width: 150px;
+    border: 1px solid black;
+    border-radius: .8rem;
+    padding: .5rem;
+}
 /* _content/AspNetCore/Views/Shared/_HomePartial.cshtml.rz.scp.css */
 body[b-mhavlia57w]{
     margin: 0;
