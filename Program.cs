@@ -1,10 +1,17 @@
+using AspNetCore.Data;
+using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDistributedMemoryCache();// S
+builder.Services.AddDbContext<TaskGroupsContext>(option => {
+    option.UseSqlServer(builder.Configuration.GetConnectionString("TaskGroup"));
+});
 
+builder.Services.AddDistributedMemoryCache();// S
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = ".AdventureWorks.Session";

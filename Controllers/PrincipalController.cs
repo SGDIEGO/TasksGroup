@@ -15,8 +15,13 @@ namespace AspNetCore.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var username = (HttpContext.Session.GetString("_user") == string.Empty) ? "null" : HttpContext.Session.GetString("_user");
-            return View("Index", username);
+            return View(new UserSessionModel(){
+                user_name = HttpContext.Session.GetString("user_name")!,
+                email = HttpContext.Session.Id!,
+                password = HttpContext.Session.GetString("password")!,
+                isAvailable = HttpContext.Session.IsAvailable,
+                Keys = HttpContext.Session.Keys
+            });
         }
 
         public async Task<IActionResult> Groups()

@@ -1,15 +1,31 @@
-@model string
+@model UserSessionModel
 
 @{
     ViewData["Title"] = "Welcome";
     Layout = "~/Views/Shared/_HomePartial.cshtml";
 }
 
+@section logOut{
+    @if (Model.Keys.Count() != 0)
+    {
+        <ul>
+            <li><a asp-controller="Auth" asp-action="LogOut">Log out</a></li>
+        </ul>
+    }
+}
 
+<h1> Welcome to principal @Model.user_name</h1>
 
-<h1>Welcome to principal @Model</h1>
+<p> Session is available: <strong>@Model.isAvailable</strong> </p>
 
+<p> Id Session: <strong>@Model.email</strong> </p>
 
+@{
+    foreach (var item in Model.Keys)
+    {
+        <p>@item</p>
+    }
+}
 
 @section footer{
 

@@ -1,3 +1,20 @@
+@model UserModel;
+
 @{
     ViewData["Title"] = "Login";
+}
+
+@using(Html.BeginForm(actionName: "Login", controllerName: "Auth", FormMethod.Post)) {
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.email)</legend>
+        @Html.TextBoxFor(Model => Model.email, htmlAttributes: new { required="required" })
+    </fieldset>
+
+    <fieldset>
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.password)</legend>
+        @Html.TextBoxFor(Model => Model.password, htmlAttributes: new { required="required" })
+    </fieldset>
+
+    <button type="submit">Submit</button>
 }

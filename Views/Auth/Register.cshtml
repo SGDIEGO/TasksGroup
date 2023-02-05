@@ -7,8 +7,8 @@
 @using(Html.BeginForm(actionName: "Register", controllerName: "Auth", FormMethod.Post)) {
 
     <fieldset>
-        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.userName)</legend>
-        @Html.TextBoxFor(Model => Model.userName, htmlAttributes: new { required="required" })
+        <legend>@Html.DisplayNameFor(ModelItem => ModelItem.user_name)</legend>
+        @Html.TextBoxFor(Model => Model.user_name, htmlAttributes: new { required="required" })
     </fieldset>
 
     <fieldset>
